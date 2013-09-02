@@ -1,7 +1,7 @@
 # result from qemu with tinycore 3.8.4
 # see http://wiki.osdev.org/CMOS for RTC registers
 
-$ cat /dev/cmos/0 | od -A x -t x1 -N 255 && date
+$ sudo cat /dev/cmos/0 | od -A x -t x1 -N 255 && date
 000000 41 00 08 00 07 00 02 02 09 13 26 02 10 80 00 00
 000010 40 00 f0 00 07 80 02 ff ff 2f 00 ff 3f 10 ff ff
 000020 c8 ff 3f 3f 00 00 00 00 00 00 00 00 00 00 00 00
