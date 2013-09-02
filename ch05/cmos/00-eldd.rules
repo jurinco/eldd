@@ -1,0 +1,2 @@
+# shouble be KERNEL== instead of =, see book errata
+KERNEL=="cmos[0-1]*", NAME="cmos/%n"
