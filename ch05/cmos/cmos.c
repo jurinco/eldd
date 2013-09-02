@@ -159,7 +159,8 @@ cmos_read(struct file *file, char *buf,
     if (!xferred) return -EIO;
 
     /* Copy the read bits to the user buffer */
-    if (copy_to_user(buf, (void *)data, ((xferred/8)+1)) != 0) {
+    //if (copy_to_user(buf, (void *)data, ((xferred/8)+1)) != 0) {
+    if (copy_to_user(buf, (void *)data, (xferred+7)/8) != 0) { 
         return -EIO;
     }
 
@@ -364,7 +365,7 @@ cmos_init(void)
     /* Request dynamic allocation of a device major number */
     if (alloc_chrdev_region(&cmos_dev_number, 0,
                             NUM_CMOS_BANKS, DEVICE_NAME) < 0) {
-        printk(KERN_DEBUG "Can't register device\n"); return -1;
+        printk("Can't register device\n"); return -1;
     }
 
     /* Populate sysfs entries */
