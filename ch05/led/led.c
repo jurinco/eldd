@@ -136,5 +136,4 @@ led_cleanup(void)
 
 module_init(led_init);
 module_exit(led_cleanup);
-MODULE_LICENSE("GPL");
 

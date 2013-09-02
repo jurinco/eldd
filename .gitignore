@@ -22,3 +22,6 @@
 *.order
 *.ko
 Module.symvers
+
+# misc
+*~
