@@ -1,0 +1,2 @@
+CMOS ports are occupied by RTC, so we need a custom
+kernel with RTC and RTC_CLASS disabled here.

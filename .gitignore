@@ -15,3 +15,10 @@
 *.exe
 *.out
 *.app
+
+# from kernel/.gitignore
+.*
+*.mod.c
+*.order
+*.ko
+Module.symvers
