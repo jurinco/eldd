@@ -1,3 +1,4 @@
+#include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
 #include <linux/parport.h>
@@ -137,3 +138,4 @@ led_cleanup(void)
 module_init(led_init);
 module_exit(led_cleanup);
 
+MODULE_LICENSE("GPL");
